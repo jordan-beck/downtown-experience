@@ -1,0 +1,537 @@
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('fonts/OpenSans.woff') format('woff'), url('fonts/OpenSans.ttf')  format('truetype'), url('fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*, html,
+body
+{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body
+{
+  overflow-x: hidden;
+  background-repeat:repeat-y;
+  background:#2f444e;
+}
+
+
+
+h1
+{
+  font-size: 20px;
+  font-weight: normal;
+  color: #2e6e80;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+  position: fixed;
+  top: -20px;
+  left: 0;
+}
+
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+.horizon
+{
+  z-index: 1;
+  width: 250px;
+}
+.tafhorizon
+{
+  z-index: 10;
+  width: 35px;
+}
+
+.johnhorizon
+{
+  z-index: 10;
+  width: 35px;
+}
+
+.middle
+{
+  z-index: 500;
+  width: 11578px;
+  top:auto;
+  bottom:0;
+}
+
+.taf
+{
+  z-index: 500;
+  width: 100px;
+  top:auto;
+  bottom:0;
+}
+
+.john
+{
+  z-index: 500;
+  width: 500px;
+  top:auto;
+  bottom:0;
+}
+
+.front2
+{
+  z-index: 1000;
+  width: 17000px;
+  top:auto;
+  bottom:0;
+}
+
+.taffront2
+{
+  z-index: 1000;
+  width: 1000px;
+  top:auto;
+  bottom:0;
+}  
+
+.taffront
+{
+  z-index: 1000;
+  width: 500px;
+  top:auto;
+  bottom:0;
+}
+
+.front
+{
+  z-index: 1000;
+  width: 22000px;
+  top:auto;
+  bottom:0;
+}
+
+
+.logo
+{
+  z-index: ;
+  width:  px;
+  
+}
+header
+{
+	width:100%;
+	height:auto;
+	display:inline-block;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+	border-bottom:1px solid rgba(255,255,255,.3);
+	padding:15px 15px 10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+#logo
+{
+	float:left;
+	margin-top:5px;
+}
+#logo a
+{
+	font-family:'OpenSans';
+	color:rgba(255,255,255,.7);
+	text-transform: uppercase;
+    font-weight: 700;
+	font-size: 18px;
+	line-height:20px;
+	text-decoration:none;
+	transition:all ease-in-out .5s;
+	-moz-transition:all ease-in-out .5s;
+	-ms-transition:all ease-in-out .5s;
+	-o-transition:all ease-in-out .5s;
+	-webkit-transition:all ease-in-out .5s;
+}
+#logo a:hover
+{
+	color:rgba(255,255,255,1);
+}
+.menu
+{
+	height:auto;
+	display:inline-block;
+	float:right;
+	margin:15px 0 0;
+}
+.menu > li
+{
+	display:inline-block;
+	padding:0 10px 0;
+	margin-top:5px;
+	position:relative;
+}
+.menu > li > ul
+{
+	position:absolute;
+	top:100%;
+	left:0;
+	display:none;
+	padding-top:35px;
+
+}
+.menu > li:hover ul
+{
+	display:block;
+}
+.menu > li > ul li
+{
+	display:inline-block;
+}
+.menu > li > ul li a
+{
+	display:block;
+	background: rgba(255,255,255,.7);
+	color:#2f444e;
+	text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+	font-family:'OpenSans';
+	text-decoration:none;
+	padding:10px 20px 10px 5px;
+	border-bottom:1px solid #2f444e;
+	transition:all ease-in-out .5s;
+	-moz-transition:all ease-in-out .5s;
+	-ms-transition:all ease-in-out .5s;
+	-o-transition:all ease-in-out .5s;
+	-webkit-transition:all ease-in-out .5s;
+}
+.menu > li > ul li a:hover
+{
+	color: rgba(255,255,255,1);
+	border-bottom:1px solid rgba(255,255,255,1);
+}
+.menu > li > a
+{
+	display:block;
+	color: rgba(255,255,255,.7);
+	text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+	font-family:'OpenSans';
+	text-decoration:none;
+	transition:all ease-in-out .5s;
+	-moz-transition:all ease-in-out .5s;
+	-ms-transition:all ease-in-out .5s;
+	-o-transition:all ease-in-out .5s;
+	-webkit-transition:all ease-in-out .5s;
+}
+.menu > li > a:hover
+{
+	color: rgba(255,255,255,1);
+}
+#social
+{
+	float:right;
+	display:inline-block;
+	margin:15px 0 0;
+}
+#social li
+{
+	padding:0 15px;
+	display:inline-block
+}
+#social li a
+{
+	display:block;
+	color: rgba(255,255,255,.7);
+	text-decoration:none;
+	transition:all ease-in-out .5s;
+	-moz-transition:all ease-in-out .5s;
+	-ms-transition:all ease-in-out .5s;
+	-o-transition:all ease-in-out .5s;
+	-webkit-transition:all ease-in-out .5s;
+	font-size:25px;
+}
+#social li a:hover
+{
+	color: rgba(255,255,255,1);
+}
+.mob-menu
+{
+	display:none;
+	float:right;
+	font-size:20px;
+	font-family:'OpenSans';
+	color:rgba(255,255,255,.7);
+	text-decoration:none;
+	margin:15px 0 0;
+	padding-left:35px;
+	background:url(../images/menu-icon.png) no-repeat left center;
+	margin-left:5px;
+}
+@media screen and (min-width:769px) and (max-width:899px)
+{
+	#social li
+	{
+		padding:0 8px;
+	}
+}
+@media screen and (min-width:100px) and (max-width:768px)
+{
+	.menu
+	{
+		display:none;
+		position:absolute;
+		width:100%;
+		left:0;
+		top:100%;
+		margin-top:0;
+	}
+	.menu > li
+	{
+		width:100%;
+		display:inline-block;
+		text-align:center;
+		padding:0;
+		margin:0;
+	}
+	.menu > li > a
+	{
+		width:100%;
+		padding:10px 0;
+		background:rgba(255,255,255,.7);
+		color:#2f444e;
+		border-bottom:1px solid #2f444e;
+	}
+	.menu > li > a:hover
+	{
+		background:#2f444e;
+		color:rgba(255,255,255,.7);
+	}
+	.menu > li > ul
+	{
+		width:100%;
+		display:block;
+		position:static;
+		padding-top:0;
+	}
+	.menu > li > ul > li
+	{
+		width:100%;
+	}
+	.menu > li > ul > li a
+	{
+		padding:10px 0;
+		background:#3a677c;
+		color:rgba(255,255,255,.7);
+		border-color:rgba(255,255,255,.7);
+	}
+	.mob-menu
+	{
+		display:block;
+	}
+	header
+	{
+		position:fixed;
+	}
+}
+@media screen and (min-width:100px) and (max-width:500px)
+{
+	.mob-menu
+	{
+		clear:both;
+	}
+	#social
+	{
+		float:left;
+	}
+	#logo
+	{
+		float:none;
+		margin:5px auto 0;
+		display:block;
+		width:207px;
+	}
+}
+
+h2 {
+	
+	color: #cccccc;
+	max-width: 600px;
+	margin-left: auto;
+    margin-right: auto;
+	font-size:105%;
+	padding-top:15%;
+	font-weight: 500;
+	
+}
+
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 400px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: auto;
+    margin-right: auto;
+	color: #999999;
+	
+}
+
+
+
+}
+.page-container {
+}
+.page-container a, .page-container a:link, .page-container a:visited, .page-container a:focus {
+  padding: 3px 6px;
+  background: #b13e12;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+.page-container > * {
+  width: 940px;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+
+
+
+
+}
+
+/* Modal window sample styles */
+/* Vertical centering trick http://css-tricks.com/centering-in-the-unknown/ */
+.modal::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.target {
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+ }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+  display: none;
+  /* Fallback for legacy browsers */
+  background-color: rgba(0,0,0,0.6);
+}
+.modal > .content {
+   text-align: left;
+   display: inline-block;
+   background-color: #404040;
+   box-sizing: border-box;
+   color: white;
+   position: relative;
+   width: 500px;
+   padding: 20px;
+ }
+
+ .modal > .content .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+ }
+
+ /* Behaviour on legacy browsers */
+.target:target + .modal {
+    display: block;
+}
+
+/* Fallback for IE8 */
+.modal.is-expanded {
+   display: block;
+}
+.modal.is-expanded > .content {
+  top: 50%;
+  margin-top: -45px;
+}
+
+
+/* Behavior on modern browsers */
+:root .modal {
+  display: block;
+  background-color: transparent;
+  transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+  transform-origin: center center;
+  transform: scale(0, 0);
+}
+:root .modal > .content {
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+:root .target:target + .modal {
+  transform: scale(1, 1);
+}
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 40px;
+	background-color: #2f444e; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
